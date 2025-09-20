@@ -1,2 +1,17 @@
-# talk-to-your-pc-mcp-server
-Talk/Execute/TroubleShoot your PC. Don't need to open settings, google commands and run em. Simply instruct what do you wanna do
+# Talk to Your PC - MCP Server
+
+🖥️ **Control and troubleshoot your PC using natural language through Claude, ChatGPT, or any MCP-compatible AI assistant.**
+
+## Features
+
+- 🔍 **System Diagnosis** - Find what's wrong with your computer
+- ⚙️ **PC Settings** - Check volume, WiFi, battery, and more
+- 🛠️ **Troubleshooting** - Fix common system issues
+- 🌐 **Cross-Platform** - Works on Windows, macOS, and Linux
+- 🤖 **Multiple LLMs** - Supports OpenAI, Claude, and Azure OpenAI
+
+## Quick Start
+
+### 1. Install
+```bash
+pip install talk-to-pc-mcp

@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  talk-to-pc-mcp:
+    build: .
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - AZURE_OPENAI_API_KEY=${AZURE_OPENAI_API_KEY}
+      - AZURE_OPENAI_ENDPOINT=${AZURE_OPENAI_ENDPOINT}
+      - AZURE_OPENAI_DEPLOYMENT_NAME=${AZURE_OPENAI_DEPLOYMENT_NAME}
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+    network_mode: host
+    restart: unless-stopped
+
+  # Example: Run with specific LLM
+  talk-to-pc-openai:
+    build: .
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=gpt-4
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+    network_mode: host
+    restart: unless-stopped
